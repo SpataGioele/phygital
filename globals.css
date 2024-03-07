@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --background-primary: #12161e;
+    --color-primary: #fff;
+    --color-secondary: rgba(255, 255, 255, 0.2);
+    --color-important: #8700FF;
+}
+
+body, html {
+    background-color: var(--background-primary);
+    color: var(--color-primary);
+    font-family: "Varela Round", sans-serif;
+    font-optical-sizing: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+img {
+    user-select: none;
+}
+
+.hero_banner {
+    overflow: hidden;
+}
+
+.layout_details {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+}
+
+.text_content > div > h1::after {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-140%);
+}
+
+.text_content > h1 {
+    color: transparent;
+    -webkit-text-stroke: 1px white; 
+}
+
+.text_content > h1::before {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+}
+
+@media all and (max-width: 1279px) {
+    .text_content > div > h1::after {
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        right: -30px;
+        transform: translateY(-50%);
+        border: 2px solid var(--color-primary);
+    }
+
+    .text_content > h1::before {
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        border: 2px solid var(--color-primary);
+    }
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
