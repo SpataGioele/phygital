@@ -1,5 +1,9 @@
 function main() {
-    renderDots(document.querySelector(".layout"))
+    const layouts = document.querySelectorAll(".layout")
+
+    layouts.forEach(layout => {
+        renderDots(layout)
+    })
 }
 
 function renderDots(parent) {
