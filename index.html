@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/all.css">
 
     <!-- script liks -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/script.js"></script>
 
@@ -90,20 +91,7 @@
     <!-- section 1 start -->
     <section id="section_one" class="flex justify-center items-center relative">
         <div class="layout w-[98vw] h-[95vh] p-[60px] border border-[var(--color-secondary)] relative md:flex">
-            <div class="w-[500px] h-[500px] mt-[50px] ml-[50px] relative">
-                <img src="./img/placeholder.webp" alt="some-image"
-                    class="w-full h-full object-cover border-2 border-[#fff] p-[10px]">
-                <img src="./img/placeholder.webp" alt="some-image"
-                    class="absolute right-[-50%] bottom-[-50%] w-[300px] h-[300px] object-cover border-2 border-[#fff] p-[10px] translate-y-[-50%] translate-x-[-50%]">
-            </div>
-            <div class="mt-[50px] ml-[50px]">
-                <h1 class="uppercase text-[1.5rem]">titolo</h1>
-                <p class="mt-[30px] max-w-[600px] text-[0.9rem]">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Eveniet est voluptatibus esse sed
-                    fugit rem veniam ad expedita eligendi eius hic ea vitae id incidunt assumenda fugiat, impedit
-                    repellat laborum?
-                </p>
-            </div>
+
 
             <!-- dettagli layout start -->
             <!-- top left -->
@@ -138,23 +126,40 @@
 
     <!-- section 2 start -->
     <section id="section_two" class="flex justify-center items-center relative">
-        <div class="layout w-[98vw] h-[95vh] p-[60px] border border-[var(--color-secondary)] relative md:flex">
-            <div class="w-[500px] h-[500px] mt-[50px] ml-[50px] relative">
-                <img src="./img/placeholder.webp" alt="some-image"
-                    class="w-full h-full object-cover border-2 border-[#fff] p-[10px]">
-                <img src="./img/placeholder.webp" alt="some-image"
-                    class="absolute right-[-50%] bottom-[-50%] w-[300px] h-[300px] object-cover border-2 border-[#fff] p-[10px] translate-y-[-50%] translate-x-[-50%]">
+        <div class="layout w-[98vw] h-[95vh] p-[60px] border border-[var(--color-secondary)] relative text-center">
+            <h1 class="text-[3rem] underline text-[#8700FF]">Market</h1>
+            <div class="grid grid-cols-2 mt-[100px]">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[500px] mt-[50px]">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="text-[0.9rem] mt-[50px]">
+                        The <span class="underline">European market</span> for the metaverse will <span class="underline">surpass the
+                            Chinese one</span> in 2030 <br> with an annual growth rate of 36.5%, <br> expected
+                        to reach 119.35 billion dollars in revenue.
+                    </div>
+                </div>
+                
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="text-[1.8rem] text-[#8700FF]">Blockchain</h1>
+                    <div class="text-[1.1rem] mt-[20px]">
+                        The metaverse is based on the blockchain. <br>
+                        This decentralized technology offers: <br>
+                        - <span class="underline">transparency</span>  <br>
+                        - <span class="underline">security</span> <br>
+                        - <span class="underline">immutability to data</span><br>
+                    </div>
+
+                    <div class="mt-[50px]">
+                        <span class="underline">Cryptocurrencies</span>, which are often used in metaverses <br> as a medium of exchange, are based on <br> blockchain and represent a
+                        new paradigm for the financial system.
+                    </div>
+                    
+
+                </div>
             </div>
-            <div class="mt-[50px] ml-[50px]">
-                <h1 class="uppercase text-[1.5rem]">titolo</h1>
-                <p class="mt-[30px] max-w-[600px] text-[0.9rem]">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.
-                    Eveniet est voluptatibus esse sed
-                    fugit rem veniam ad expedita eligendi eius hic ea vitae id incidunt assumenda fugiat, impedit
-                    repellat
-                    laborum?
-                </p>
-            </div>
+            
+
 
             <!-- dettagli layout start -->
             <!-- top left -->
@@ -272,7 +277,7 @@
             </div>
             <div class="mt-[50px] ml-[150px]">
                 <h1 class="uppercase text-[1.5rem] text-[#8700FF]">IMPERSIVE</h1>
-                <p class="mt-[30px] max-w-[600px] text-[0.9rem]">
+                <p class="mt-[30px] max-w-[600px] text-[1.1rem]">
                     Impersive, founded in 2014 by Guido Geminiani, specializes in VR video production, offering
                     immersive experiences through 360 stereoscopic 3D videos with full-body motion. Their advanced
                     technology is able to create engaging virtual environments for users to explore. <br><br>
@@ -349,30 +354,30 @@
     <!-- section 6 start -->
     <section id="section_six" class="flex justify-center items-center relative">
         <div class="layout w-[98vw] h-[95vh] p-[60px] border border-[var(--color-secondary)] relative">
-            <h1 class="uppercase text-[2rem] mt-[50px] ml-[50%] translate-x-[-50%] mb-[100px] text-[#8700FF] font-bold text-center">
-                AVATARS: your counterpart <br> in the metaverse
+            <h1 class="uppercase text-[2rem] mt-[50px] ml-[50%] translate-x-[-50%] mb-[100px] font-bold text-center">
+                <span class="text-[#8700FF]">AVATARS:</span> your counterpart <br> in the metaverse
             </h1>
 
-            <p class="w-[45%] mb-[150px] mx-auto text-center">
+            <p class="w-[45%] mb-[50px] mx-auto text-center">
                 These digital figures, often customized and molded according to our tastes and preferences, allow us to actively participate in immersive and engaging experiences. <br>
                 Through them, we can communicate, work, socialize, <br>
                 and even experiment with new forms of art and entertainment.
             </p>
 
-            <div class="grid md:grid-cols-5 h-[250px] w-full gap-[30px]">
-                <div class="w-full h-full">
+            <div class="grid md:grid-cols-5 h-[350px] w-full gap-[30px]">
+                <div class="w-full h-[350px]">
+                    <img src="./img/cosimo.jpg" alt="" class="w-full h-full object-cover rounded-[10px]">
+                </div>
+                <div class="w-full h-[350px]">
+                    <img src="./img/gioele.jpg" alt="" class="w-full h-full object-cover rounded-[10px]">
+                </div>
+                <div class="w-full h-[350px]">
+                    <img src="./img/leonardo.jpg" alt="" class="w-full h-full object-cover rounded-[10px]">
+                </div>
+                <div class="w-full h-[350px]">
                     <img src="./img/placeholder.webp" alt="" class="w-full h-full object-cover rounded-[10px]">
                 </div>
-                <div class="w-full h-full">
-                    <img src="./img/placeholder.webp" alt="" class="w-full h-full object-cover rounded-[10px]">
-                </div>
-                <div class="w-full h-full">
-                    <img src="./img/placeholder.webp" alt="" class="w-full h-full object-cover rounded-[10px]">
-                </div>
-                <div class="w-full h-full">
-                    <img src="./img/placeholder.webp" alt="" class="w-full h-full object-cover rounded-[10px]">
-                </div>
-                <div class="w-full h-full">
+                <div class="w-full h-[350px]">
                     <img src="./img/placeholder.webp" alt="" class="w-full h-full object-cover rounded-[10px]">
                 </div>
             </div>

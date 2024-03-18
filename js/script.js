@@ -4,6 +4,8 @@ function main() {
     layouts.forEach(layout => {
         renderDots(layout)
     })
+
+    printChart();
 }
 
 function renderDots(parent) {
@@ -31,6 +33,31 @@ function renderDots(parent) {
             parent.appendChild(dot);
         }
     }
+}
+
+function printChart() {
+    const ctx = document.getElementById("myChart")
+
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: ["2020", "2024"],
+            datasets: [
+                {
+                    label: "Value",
+                    data: [46000000000, 800000000000],
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+            },
+        },
+    })
 }
 
 document.addEventListener("DOMContentLoaded", main)
